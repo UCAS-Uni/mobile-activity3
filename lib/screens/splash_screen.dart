@@ -1,3 +1,4 @@
+import 'package:activity3/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../app_navigator.dart';
@@ -18,10 +19,11 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(
         const Duration(
           seconds: 3,
-        ),
-        () => AppRouter.navigateToWidget(
-              const LoginScreen(),
-            ));
+        ), () {
+      AppRouter.navigateToWidget(
+        const OnboardingScreen(),
+      );
+    });
   }
 
   @override

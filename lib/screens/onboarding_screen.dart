@@ -1,6 +1,8 @@
+import 'package:activity3/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../app_navigator.dart';
 import '../widgets/questions_text.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -34,7 +36,7 @@ class OnboardingScreen extends StatelessWidget {
                 ),
               ),
               child: SvgPicture.asset(
-                'images/logo.svg',
+                'assets/images/logo.svg',
                 width: 61,
                 height: 78,
                 fit: BoxFit.scaleDown,
@@ -65,7 +67,7 @@ class OnboardingScreen extends StatelessWidget {
                   const SizedBox(
                     height: 50,
                   ),
-                  Text(
+                  const Text(
                     'How Cuckoo will help?',
                     style: const TextStyle(
                       fontSize: 17,
@@ -116,8 +118,8 @@ class OnboardingScreen extends StatelessWidget {
                             bottomLeft: Radius.circular(10),
                           ),
                         ),
-                        height: 56,
-                        width: 53,
+                        height: 50,
+                        width: 38,
                         child: const Center(
                           child: Text(
                             '91',
@@ -145,19 +147,25 @@ class OnboardingScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF37E39F),
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(40),
-                            bottomRight: Radius.circular(40),
+                      InkWell(
+                        onTap: () {
+                          AppRouter.navigateWithReplacementToWidget(
+                              LoginScreen());
+                        },
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            color: Color(0xFF37E39F),
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(40),
+                              bottomRight: Radius.circular(40),
+                            ),
                           ),
-                        ),
-                        height: 56,
-                        width: 66,
-                        child: const Icon(
-                          Icons.arrow_forward_sharp,
-                          color: Colors.white,
+                          height: 56,
+                          width: 66,
+                          child: const Icon(
+                            Icons.arrow_forward_sharp,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ],

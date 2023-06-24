@@ -1,6 +1,3 @@
-import 'package:activity3/screens/onboarding_screen.dart';
-
-import '../app_navigator.dart';
 import '../widgets/splash_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -69,9 +66,9 @@ class LoginScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       RichText(
-                        text: TextSpan(
+                        text: const TextSpan(
                           text: 'New Member?',
-                          style: const TextStyle(
+                          style: TextStyle(
                               color: const Color(0xFF5927FF),
                               fontSize: 16,
                               fontWeight: FontWeight.w600),
@@ -89,7 +86,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        width: 57.5,
+                        width: 37.5,
                       ),
                       TextButton(
                         style: TextButton.styleFrom(
@@ -97,9 +94,9 @@ class LoginScreen extends StatelessWidget {
                           backgroundColor: const Color(0xFF8160EF),
                         ),
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           'LOGIN',
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -111,30 +108,24 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(
                     height: 79,
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      AppRouter.navigateWithReplacementToWidget(
-                          OnboardingScreen());
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Get Start Now!',
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Get Start Now!',
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
                         ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        const Icon(
-                          Icons.arrow_forward_outlined,
-                          size: 18,
-                        ),
-                      ],
-                    ),
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      const Icon(
+                        Icons.arrow_forward_outlined,
+                        size: 18,
+                      ),
+                    ],
                   )
                 ],
               ),

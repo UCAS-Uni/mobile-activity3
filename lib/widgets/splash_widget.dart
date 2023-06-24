@@ -1,8 +1,5 @@
-import 'package:activity3/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../app_navigator.dart';
 
 class SplashWidget extends StatefulWidget {
   const SplashWidget({
@@ -14,14 +11,6 @@ class SplashWidget extends StatefulWidget {
 }
 
 class _SplashWidgetState extends State<SplashWidget> {
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
-      AppRouter.navigateWithReplacementToWidget(const OnboardingScreen());
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Stack(
